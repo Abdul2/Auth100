@@ -14,7 +14,7 @@ import (
 
 
 //1. decide where do you want to keep your hashed passwords - one time operation
-var PASSWRDFILE = "/home/aabdi/goprojects/src/github.com/Abdul2/userauthentication/htpasswd"
+var PASSWRDFILE = "/location/of/passwdfile"
 
 
 
