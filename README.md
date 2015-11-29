@@ -2,17 +2,17 @@
 # <h1> Auth100 </h1>
 
 
-<h2> This is a simple Go programme that implements a file bases authentications.
+<h3> This is a simple Go programme that implements a file based authentications.
 
-I am not sure I have looked hard enough but could not find much resource 
+I am not sure I have looked hard enough but I couldn't find much resource 
 
-on simple authentication and since i needed simple authentication, ii decided 
+on simple authentication and since i needed simple authentication, i decided 
 
 to write a module.
 
 this work is under development but good enough to use for development 
 
-work. </h2>
+work. </h3>
 
 
 <h1> what does it do </h1>
