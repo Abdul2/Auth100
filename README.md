@@ -2,20 +2,13 @@
 # Auth100 
 
 
-This is a simple Go programme that implements a file based authentications.
+This is a simple Go programme that implements a file based authentications.I am not sure I have looked hard enough but I couldn't find much on file based
+authentication and since i needed an  authentication module, i decided to write pkg. 
 
-I am not sure I have looked hard enough but I couldn't find much resource 
-
-on simple authentication and since i needed simple authentication, i decided 
-
-to write a module.
-
-this work is under development but good enough to use for development 
-
-work
+this work is under development and i intend to improve on it but for now is good enough for testing and development work
 
 
-# what does it do
+## what does it do
 
 Auth100 does four things
 
@@ -24,7 +17,7 @@ Auth100 does four things
 3. validates username and password 
 
 
-# How to use 
+## How to use 
 
 
 Below is a sample client code. to use Auth100
@@ -38,24 +31,24 @@ Below is a sample client code. to use Auth100
  
  
 
-# Methods 
+## Methods 
 
 1. Encryptpassword(username string, password string, passwordfile string) 
 
-  this method creates a new line in the password file and writes to it the
-  user name and password in the format of username:$2a$10$S9T.BTkpi11iAszdKpqEUeToC4eiGoe.spQWH5TmOQlhpT6Kg.wdq
-  Colon (:) separets the user name and the hashed password.  
+  this method creates a new line in the password file and writes the
+  username  and password to it in the format of ```username:$2a$10$S9T.BTkpi11iAszdKpqEUeToC4eiGoe.spQWH5TmOQlhpT6Kg.wdq```
+  .Colon (:) separets the user name and the hashed password.  
   
 2. Validateusrandpsswr(providedusername string, providedpassword string) (bool,bool,Authenticationmessage)
 
    given a username and password, Validateusrandpsswr checks if username exists and if the does validates 
-   the supplied password. it returns to booleans and a message confirming the outcome of the validation 
+   the supplied password. it returns two booleans and a message confirming the outcome of the validation 
    processes.  the first boolean confirms or otherwise the username. the second boolean confirms or otherwise
    the validity of the provided password.  note that password validation is always false if username search returns
    a false value.
    
 
-# Improvements (time permitting)
+## Improvements (time permitting)
 
 1. more testing 
 2. error handling 
@@ -66,13 +59,13 @@ Below is a sample client code. to use Auth100
 1. slow file IO (on my machine)
 
  
-#feedback:
+## feedback:
  
   abdulrashid2@gmail.com
   
   
 
-  
+## sample client code  
 
 package main
 
