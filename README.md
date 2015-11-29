@@ -1,8 +1,8 @@
 
-# <h1> Auth100 </h1>
+# Auth100 
 
 
-<h3> This is a simple Go programme that implements a file based authentications.
+This is a simple Go programme that implements a file based authentications.
 
 I am not sure I have looked hard enough but I couldn't find much resource 
 
@@ -12,38 +12,67 @@ to write a module.
 
 this work is under development but good enough to use for development 
 
-work. </h3>
+work
 
 
-<h1> what does it do </h1>
+# what does it do
 
-##<h2> Auth100 does four things
+Auth100 does four things
 
-   1. creates hashed passwords
-   2. stores username and and associated hashed password in a client specified password file
-   3. validates username and password 
-
-</h2>
+1. creates hashed passwords
+2. stores username and and associated hashed password in a client specified password file
+3. validates username and password 
 
 
-## <h1> How to use </h1>
+# How to use 
 
 
-<h2> Below is a sample client code. to use Auth100
+Below is a sample client code. to use Auth100
  
  
- 1. import 
- 2. create a password file and point to it
- 3. create some dummy data to test 
- 4. validate user and password
- 5. register  new users 
+1. import 
+2. create a password file and point to it
+3. create some dummy data to test 
+4. validate user and password
+5. register  new users 
  
  
- 
- 
-</h2>
 
+# Methods 
 
+1. Encryptpassword(username string, password string, passwordfile string) 
+
+  this method creates a new line in the password file and writes to it the
+  user name and password in the format of username:$2a$10$S9T.BTkpi11iAszdKpqEUeToC4eiGoe.spQWH5TmOQlhpT6Kg.wdq
+  Colon (:) separets the user name and the hashed password.  
+  
+2. Validateusrandpsswr(providedusername string, providedpassword string) (bool,bool,Authenticationmessage)
+
+   given a username and password, Validateusrandpsswr checks if username exists and if the does validates 
+   the supplied password. it returns to booleans and a message confirming the outcome of the validation 
+   processes.  the first boolean confirms or otherwise the username. the second boolean confirms or otherwise
+   the validity of the provided password.  note that password validation is always false if username search returns
+   a false value.
+   
+
+# Improvements (time permitting)
+
+1. more testing 
+2. error handling 
+3. improving the code 
+
+# known issues
+ 
+1. slow file IO (on my machine)
+
+ 
+#feedback:
+ 
+  abdulrashid2@gmail.com
+  
+  
+
+  
 
 package main
 
