@@ -8,7 +8,7 @@ authentication and since i needed an  authentication module, i decided to write 
 this work is under development and i intend to improve on it but for now is good enough for testing and development work
 
 
-## what does it do
+## what does it do?
 
 Auth100 does four things
 
@@ -17,7 +17,7 @@ Auth100 does four things
 3. validates username and password 
 
 
-## How to use 
+## How to use ?
 
 
 Below is a sample client code. to use Auth100
