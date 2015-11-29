@@ -104,6 +104,7 @@ func main() {
 
 // 4 validate 	
 	Auth100.Initiatecredentialscheckingop(PASSWRDFILE)
+	
 	var a,b bool
 	var s Auth100.Authenticationmessage
 	a,b,s = Auth100.Validateusrandpsswr("user0","password1")
